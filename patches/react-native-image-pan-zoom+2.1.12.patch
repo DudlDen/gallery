@@ -1,0 +1,25 @@
+diff --git a/node_modules/react-native-image-pan-zoom/built/image-zoom/image-zoom.type.d.ts b/node_modules/react-native-image-pan-zoom/built/image-zoom/image-zoom.type.d.ts
+index 01ab965..95f2e17 100644
+--- a/node_modules/react-native-image-pan-zoom/built/image-zoom/image-zoom.type.d.ts
++++ b/node_modules/react-native-image-pan-zoom/built/image-zoom/image-zoom.type.d.ts
+@@ -23,6 +23,7 @@ export declare class ImageZoomProps {
+      * 操作区域宽度
+      */
+     cropWidth: number;
++    children?: JSX.Element = undefined;
+     /**
+      * 操作区域高度
+      */
+diff --git a/node_modules/react-native-image-pan-zoom/src/image-zoom/image-zoom.type.ts b/node_modules/react-native-image-pan-zoom/src/image-zoom/image-zoom.type.ts
+index 6871637..058fdb4 100644
+--- a/node_modules/react-native-image-pan-zoom/src/image-zoom/image-zoom.type.ts
++++ b/node_modules/react-native-image-pan-zoom/src/image-zoom/image-zoom.type.ts
+@@ -47,7 +47,7 @@ export class ImageZoomProps {
+    * 单手是否能移动图片
+    */
+   public panToMove?: boolean = true;
+-
++  public children?: JSX.Element = undefined;
+   /**
+    * 多手指是否能缩放
+    */
